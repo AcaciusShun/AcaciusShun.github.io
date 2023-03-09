@@ -6,7 +6,7 @@
   <link href="https://www.xubailong.com/atom.xml" rel="self"/>
   
   <link href="https://www.xubailong.com/"/>
-  <updated>2022-07-07T06:48:28.483Z</updated>
+  <updated>2023-03-09T08:19:09.221Z</updated>
   <id>https://www.xubailong.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SSH本地代理65535问题</title>
+    <link href="https://www.xubailong.com/2023/03/09/SSH%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%90%8665535/"/>
+    <id>https://www.xubailong.com/2023/03/09/SSH%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%90%8665535/</id>
+    <published>2023-03-09T08:09:28.700Z</published>
+    <updated>2023-03-09T08:19:09.221Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;参考链接: &lt;a href=&quot;https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port&quot;&gt;Using SSH over the HTTPS</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://www.xubailong.com/categories/Hexo/"/>
+    
+    
+    <category term="issue" scheme="https://www.xubailong.com/tags/issue/"/>
+    
+  </entry>
   
   <entry>
     <title>古典音乐导论:相关资料</title>

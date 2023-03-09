@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>SSH本地代理65535问题</title>
+      <link href="/2023/03/09/SSH%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%90%8665535/"/>
+      <url>/2023/03/09/SSH%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%90%8665535/</url>
+      
+        <content type="html"><![CDATA[<p>参考链接: <a href="https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">Using SSH over the HTTPS port</a></p><p>有时，防火墙拒绝完全允许 ​​SSH 连接。如果不能选择使用带有凭证缓存的 HTTPS 克隆，您可以尝试使用通过 HTTPS 端口建立的 SSH 连接进行克隆。大多数防火墙规则应该允许这样做，但代理服务器可能会干扰。</p><p>测试是否可以通过HTTPS端口进行SSH连接：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh -T -p 443 git@ssh.github.com</span><br><span class="line">&gt; Hi USERNAME! You<span class="string">&#x27;ve successfully authenticated, but GitHub does not</span></span><br><span class="line"><span class="string">&gt; provide shell access.</span></span><br></pre></td></tr></table></figure><p>如果您可以通过HTTPS端口进行SSH连接，则可以使用以下命令克隆：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span>  ssh://git@ssh.github.com:443/USERNAME/REPOSITORY.git</span><br></pre></td></tr></table></figure><p>修改ssh配置文件：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.ssh/config</span><br></pre></td></tr></table></figure><p>添加以下内容：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">  HostName ssh.github.com</span><br><span class="line">  Port 443</span><br><span class="line">  User git</span><br></pre></td></tr></table></figure><p>测试是否有效</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line">&gt; Hi USERNAME! You<span class="string">&#x27;ve successfully authenticated, but GitHub does not</span></span><br><span class="line"><span class="string">&gt; provide shell access.</span></span><br></pre></td></tr></table></figure><p>第一次连接,更新known_hosts文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; The authenticity of host <span class="string">&#x27;[ssh.github.com]:443 ([140.82.112.36]:443)&#x27;</span> can<span class="string">&#x27;t be established.</span></span><br><span class="line"><span class="string">&gt; ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.</span></span><br><span class="line"><span class="string">&gt; This host key is known by the following other names/addresses:</span></span><br><span class="line"><span class="string">&gt;     ~/.ssh/known_hosts:32: github.com</span></span><br><span class="line"><span class="string">&gt; Are you sure you want to continue connecting (yes/no/[fingerprint])?</span></span><br></pre></td></tr></table></figure><p>回答’YES’,加入known_hosts配置文件,以后就不会再提示了</p><p>建立连接</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> issue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>古典音乐导论:相关资料</title>
       <link href="/2022/07/06/%E5%8F%A4%E5%85%B8%E9%9F%B3%E4%B9%90%E5%AF%BC%E8%AE%BA%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/"/>
       <url>/2022/07/06/%E5%8F%A4%E5%85%B8%E9%9F%B3%E4%B9%90%E5%AF%BC%E8%AE%BA%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</url>
