@@ -1,7 +1,7 @@
 baseURL = "http://example.org/"
 DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "en-us"
-title = "A Hugo Site"
+title = "琥珀川杂记"
 copyright = "This is a customized copyright."
 theme = "diary"
 # googleAnalytics = "UA-123-45"
@@ -19,7 +19,7 @@ theme = "diary"
     tabWidth = 4
 
 [params]
-subtitle = "Themed by Diary."
+subtitle = ""
 enableGitalk = false
 enableGiscus = true
 
@@ -49,19 +49,19 @@ theme="github-light"
 
 # Please visit https://giscus.app/ to generate settings.
 [params.giscus]
-    data_repo="username/repo"
-    data-repo-id="**************************"    
-    data_category="General"
-    data_category_id="*********************"
-    data_mapping="pathname"
-    data_strict="0"
-    data_reactions_enabled="1"
-    data_emit_metadata="0"
-    data_input_position="bottom"
-    data_theme="preferred_color_scheme"
-    data_lang="en"
+    data-repo="bailongctui/bailongctui.github.io"
+    data-repo-id="R_kgDOHV6OYg"
+    data-category="General"
+    data-category-id="DIC_kwDOHV6OYs4CWRow"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    data-loading="lazy"
     crossorigin="anonymous"
-
 
 [[menu.main]]
 url = "/posts"
