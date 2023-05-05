@@ -69,10 +69,10 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       # 关联主题子模块
-      - name: Get theme code
+      - name: Get theme code submodules 
         uses: actions/checkout@v3
-        with:
-          repository: https://github.com/bailongctui/hugo-theme-diary.git
+        with: 
+          repository: bailongctui/hugo-theme-diary
           path: themes/dairy
           ref: main
       # 复制主题到 Hugo 项目
