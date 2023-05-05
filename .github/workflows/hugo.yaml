@@ -69,16 +69,16 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       # 关联主题子模块
-      # - name: Get theme code
-      #   uses: actions/checkout@v2
-      #   with:
-      #     repository: https://github.com/bailongctui/hugo-theme-diary.git
-      #     path: themes/dairy
-      #     ref: main
-      # # 复制主题到 Hugo 项目
-      # - name: Copy theme
-      #   # 复制themes/dairy/exampleSite 下的layouts、resources、config.toml文件 到你的 Hugo 项目
-      #   run: cp -r themes/dairy/exampleSite/layouts/* layouts/ && cp -r themes/dairy/exampleSite/resources/* resources/ && cp themes/dairy/exampleSite/config.toml config.toml
+      - name: Get theme code
+        uses: actions/checkout@v3
+        with:
+          repository: https://github.com/bailongctui/hugo-theme-diary.git
+          path: themes/dairy
+          ref: main
+      # 复制主题到 Hugo 项目
+      - name: Copy theme
+        # 复制themes/dairy/exampleSite 下的layouts、resources、config.toml文件 到你的 Hugo 项目
+        run: cp -r themes/dairy/exampleSite/layouts/* layouts/ && cp -r themes/dairy/exampleSite/resources/* resources/ && cp themes/dairy/exampleSite/config.toml config.toml
 
       # 构建 Hugo 站点
       - name: Build with Hugo
