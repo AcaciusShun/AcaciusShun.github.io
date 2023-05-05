@@ -34,10 +34,7 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     env:
       HUGO_VERSION: 0.111.3
     steps:
@@ -59,26 +56,21 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
-      # use node 16.x
-      # - name: Use Node.js ${{ matrix.node-version }}
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: ${{ matrix.node-version }}
-
       # 安装 Node.js 依赖
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      # 关联主题子模块
-      - name: Get theme code submodules 
-        uses: actions/checkout@v3
-        with: 
-          repository: bailongctui/hugo-theme-diary
-          path: themes/dairy
-          ref: main
-      # 复制主题到 Hugo 项目
-      - name: Copy theme
-        # 复制themes/dairy/exampleSite 下的layouts、resources、config.toml文件 到你的 Hugo 项目
-        run: cp -r themes/dairy/exampleSite/layouts/* layouts/ && cp -r themes/dairy/exampleSite/resources/* resources/ && cp themes/dairy/exampleSite/config.toml config.toml
+      # # 关联主题子模块
+      # - name: Get theme code submodules 
+      #   uses: actions/checkout@v3
+      #   with: 
+      #     repository: bailongctui/hugo-theme-diary
+      #     path: themes/dairy
+      #     ref: main
+
+      # # 复制主题到 Hugo 项目
+      # - name: Copy theme
+      #   # 复制themes/dairy/exampleSite 下的layouts、resources、config.toml文件 到你的 Hugo 项目
+      #   run: cp -r themes/dairy/exampleSite/layouts/* layouts/ && cp -r themes/dairy/exampleSite/resources/* resources/ && cp themes/dairy/exampleSite/config.toml config.toml
 
       # 构建 Hugo 站点
       - name: Build with Hugo
@@ -107,7 +99,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        with:
-          github_token: ${{ secrets.HUGO_DEPLOY }}
-          # publish_dir: ./public
-          commit_message: ${{ github.event.head_commit.message }}
+        # with:
+        #   github_token: ${{ secrets.HUGO_DEPLOY }}
+        #   # publish_dir: ./public
+        #   commit_message: ${{ github.event.head_commit.message }}
