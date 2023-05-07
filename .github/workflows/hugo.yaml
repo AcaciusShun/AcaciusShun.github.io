@@ -7,8 +7,8 @@ on:
     branches:
       - main
   schedule:
-      # Runs everyday at 8:00 AM
-      - cron: "0 8 * * *"
+    # Runs everyday at 8:00 AM
+    - cron: "0 8 * * *"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
