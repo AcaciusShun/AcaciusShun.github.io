@@ -1,6 +1,9 @@
 ---
 title: Magento 相关
-tags: ['issue']
+date: 2023-03-12 10:00:00
+tags: ['magento2']
+categories: ['Programing']
+draft: true
 ---
 
 1.Magento后台创建账号 

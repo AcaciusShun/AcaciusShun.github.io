@@ -1,12 +1,12 @@
-baseurl = "https://www.example.com/"
-title = "コハク川雑録"
-author = "David Hamp-Gonsalves"
-canonifyurls = true
-languagecode = "en"
-theme = "black-and-light"
+baseURL = "http://example.org/"
 
-pygmentsstyle       = "bw"
-pygmentscodefences  = true
+# 可用语言:https://github.com/AmazingRise/hugo-theme-diary/tree/main/i18n
+DefaultContentLanguage = "en" #  diary Theme's display language, supports: en, fr, zh, zh-hant
+languageCode = "en-us"
+title = "コハク川雑録"
+copyright = "This is a customized copyright."
+# 主题
+theme = "diary"
 
 # google 分析
 googleAnalytics = "UA-123-45"
@@ -23,16 +23,10 @@ googleAnalytics = "UA-123-45"
     style = "perldoc"
     tabWidth = 4
 
-
-[taxonomies]
-   tag = "tags"
-   category = "categories"
-
 [params]
-  sitename = "コハク川雑録"
-  disableWebFonts = false
-  enableGiscus = true
-  enableGitalk = false
+subtitle = ""
+enableGitalk = false
+enableGiscus = true
 
 # Microsoft Clarity (https://clarity.microsoft.com/) is a free user behavior recording and analytics tool
 clarity = "abcdefghzd"
@@ -43,18 +37,22 @@ enableTwitterCards = true
 title = "My Blog" # will set 'og:site_name'
 description = "My HomePage Description"  # will set 'og:description'
 
-[params.utterances]
-    repo="your repo"
-    term="[ENTER TERM HERE]"
-    label="your label"
-    theme="github-light"
-
 [params.gitalk]
   owner = "user"
   repo = "repo name"
   client_id = "your client id"
   client_secret = "your client secret"
+[taxonomies]
+   tag = "tags"
+   category = "categories"
 
+[params.utterances]
+repo="your repo"
+term="[ENTER TERM HERE]"
+label="your label"
+theme="github-light"
+
+# Please visit https://giscus.app/ to generate settings.
 [params.giscus]
     data-repo="bailongctui/bailongctui.github.io"
     data-repo-id="R_kgDOHV6OYg"
@@ -71,23 +69,22 @@ description = "My HomePage Description"  # will set 'og:description'
     crossorigin="anonymous"
 
 [[menu.main]]
-    name = "Blog"
-    url  = "/blogs"
-    weight = 2
+url = "/posts"
+name = "Archive"
+weight = 1
 [[menu.main]]
-    name = "Tags"
-    url  = "/tags"
-    weight = 3
+url = "/categories"
+name = "Categories"
+weight = 2
 [[menu.main]]
-    name = "Categories"
-    url  = "/categories"
-    weight = 4
+url = "/tags"
+name = "Tags"
+weight = 3
 [[menu.main]]
-    name = "About"
-    url  = "/about"
-    weight = 0
+url = "/about"
+name = "About"
+weight = 4
 [[menu.main]]
-    name = "Rss"
-    url  = "/index.xml"
-    weight = 0
-
+url = "/index.xml"
+name = "RSS Feed"
+weight = 5
