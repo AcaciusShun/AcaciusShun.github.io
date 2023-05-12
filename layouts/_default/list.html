@@ -1,19 +1,22 @@
 {{ partial "header.html" . }}
-<h1>{{ .Title }}</h1>
+<!-- <h1>{{ .Title }}</h1> -->
+<section id="content">
+    <ul class="posts_listing">
+        
+    {{ range .Data.Pages }}
+        <li>
+            <h2>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+            <div class=date>
+                {{if not .Date.IsZero }}
+                    {{ .Date.Format (.Site.Params.dateform | default "January 2006") }}
+                {{end}}
+            </div>
+        </li>
+    {{ end }}
+    
 
-{{ range .Data.Pages }}
-<article>
-    <h2>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-       <!-- 关联数量 -->
-
-    </h2>
-    <div class=date>
-        {{if not .Date.IsZero }}
-          {{ .Date.Format (.Site.Params.dateform | default "January 2006") }}
-        {{end}}
-    </div>
-
-</article>
-{{ end }}
+    </ul>
+</section>
 {{ partial "footer.html" . }}
