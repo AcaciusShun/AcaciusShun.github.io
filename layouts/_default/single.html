@@ -30,6 +30,7 @@
       <a href="{{.NextInSection.Permalink}}">{{.NextInSection.Title}}&nbsp;&raquo;</a>
     {{ end }}
   </div>
+  {{ partial "giscus.html" . }}
   <div class="post-comment-wrapper">
     {{ if eq .Params.comment false }}
     <p style="opacity: 0.6" align="center">
