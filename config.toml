@@ -33,7 +33,7 @@ googleAnalytics = "UA-123-45"
   disableWebFonts = false
   enableGiscus = true
   enableGitalk = false
-
+  
 # Microsoft Clarity (https://clarity.microsoft.com/) is a free user behavior recording and analytics tool
 clarity = "abcdefghzd"
 
@@ -71,6 +71,10 @@ description = "My HomePage Description"  # will set 'og:description'
     crossorigin="anonymous"
 
 [[menu.main]]
+    name = "Home"
+    url  = "/"
+    weight = 1
+[[menu.main]]
     name = "Blog"
     url  = "/blogs"
     weight = 2
@@ -86,8 +90,3 @@ description = "My HomePage Description"  # will set 'og:description'
     name = "About"
     url  = "/about"
     weight = 0
-[[menu.main]]
-    name = "Rss"
-    url  = "/index.xml"
-    weight = 0
-
