@@ -28,6 +28,15 @@
       <a href="{{.NextInSection.Permalink}}">{{.NextInSection.Title}}&nbsp;&raquo;</a>
     {{ end }}
   </div>
+  <div class="post-comment-wrapper">
+    {{ if eq .Params.comment false }}
+    <p style="opacity: 0.6" align="center">
+        <small>{{ "comments_disabled" }}</small>
+    </p>
+    {{ else }}
+    {{- partial "comment.html" . -}}
+    {{ end }}
+  </div>
 </section>
 
 {{ partial "footer.html" . }}
