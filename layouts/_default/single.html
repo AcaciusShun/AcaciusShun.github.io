@@ -1,12 +1,14 @@
 {{ partial "header.html" . }}
-{{ partial "post-aside.html" . }}
+
+<!-- 侧边文章结构栏样式 -->
+<!-- {{ partial "post-aside.html" . }} -->
 
 <!-- 侧边文章结构 -->
-{{ if .TableOfContents }}
+<!-- {{ if .TableOfContents }}
 <aside id="aside-post">
     {{ .TableOfContents }}
 </aside>
-{{ end }}  
+{{ end }}   -->
 
 <section id=content>
   <h1>{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}</h1>
