@@ -4,4 +4,4 @@
 	url = https://github.com/bailongctui/hugo-theme-diary.git
 [submodule "themes/black-and-light"]
 	path = themes/black-and-light
-	url = https://github.com/davidhampgonsalves/hugo-black-and-light-theme.git
+	url = https://github.com/bailongctui/hugo-black-and-light-theme.git
