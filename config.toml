@@ -31,8 +31,10 @@ googleAnalytics = "UA-123-45"
 [params]
   sitename = "コハク川雑録"
   disableWebFonts = false
-  enableGiscus = true
+  enableGiscus = false
   enableGitalk = false
+  enableCommento = true
+
   
 # Microsoft Clarity (https://clarity.microsoft.com/) is a free user behavior recording and analytics tool
 clarity = "abcdefghzd"
@@ -69,6 +71,9 @@ description = "My HomePage Description"  # will set 'og:description'
     data-lang="zh-CN"
     data-loading="lazy"
     crossorigin="anonymous"
+
+[params.commento]
+    commentoURL="https://cdn.commento.io"
 
 [[menu.main]]
     name = "Home"
