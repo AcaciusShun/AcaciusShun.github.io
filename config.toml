@@ -60,20 +60,9 @@ description = "My HomePage Description"  # will set 'og:description'
   client_id = "your client id"
   client_secret = "your client secret"
 
-[params.giscus]
-    data_repo="bailongctui/bailongctui.github.io"
-    data_repo_id="R_kgDOHV6OYg"
-    data_category="General"
-    data_category_id="DIC_kwDOHV6OYs4CWRow"
-    data_mapping="pathname"
-    data_strict="0"
-    data_reactions_enabled="1"
-    data_emit_metadata="0"
-    data_input_position="top"
-    data_theme="preferred_color_scheme"
-    data_lang="zh_CN"
-    data_loading="lazy"
-    crossorigin="anonymous"
+# 不可用 https://giscus.app/zh-CN
+# [params.giscus]
+
 
 [params.commento]
     commentoURL="https://cdn.commento.io"
