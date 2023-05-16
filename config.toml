@@ -31,9 +31,13 @@ googleAnalytics = "UA-123-45"
 [params]
   sitename = "コハク川雑録"
   disableWebFonts = false
-  enableGiscus = false
+  # 系统启用
+  enableGiscus = true
   enableGitalk = false
-  enableCommento = true
+  enableCommento = true 
+  
+  #是够允许评论
+  comment = true  # 允许评论
 
   
 # Microsoft Clarity (https://clarity.microsoft.com/) is a free user behavior recording and analytics tool
