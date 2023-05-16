@@ -31,9 +31,11 @@ googleAnalytics = "UA-123-45"
 [params]
   sitename = "コハク川雑録"
   disableWebFonts = false
+  
   enableGiscus = true
   enableGitalk = false
-  enableCommento = true 
+  enableCommento = false
+
   comment = true
 
   
@@ -59,18 +61,18 @@ description = "My HomePage Description"  # will set 'og:description'
   client_secret = "your client secret"
 
 [params.giscus]
-    data-repo="bailongctui/bailongctui.github.io"
-    data-repo-id="R_kgDOHV6OYg"
-    data-category="General"
-    data-category-id="DIC_kwDOHV6OYs4CWRow"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="preferred_color_scheme"
-    data-lang="zh-CN"
-    data-loading="lazy"
+    data_repo="bailongctui/bailongctui.github.io"
+    data_repo_id="R_kgDOHV6OYg"
+    data_category="General"
+    data_category_id="DIC_kwDOHV6OYs4CWRow"
+    data_mapping="pathname"
+    data_strict="0"
+    data_reactions_enabled="1"
+    data_emit_metadata="0"
+    data_input_position="top"
+    data_theme="preferred_color_scheme"
+    data_lang="zh_CN"
+    data_loading="lazy"
     crossorigin="anonymous"
 
 [params.commento]
