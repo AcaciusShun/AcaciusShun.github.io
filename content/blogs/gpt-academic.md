@@ -2,7 +2,7 @@
 title: "用gpt-academic解析代码"
 date: 2023-05-10T16:45:58+08:00
 lastmod: 2023-05-10T16:45:58+08:00
-draft: false
+draft: true
 tags: ["ChatGPT"]
 categories: ["AI"]
 ---
