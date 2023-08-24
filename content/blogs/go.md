@@ -2,7 +2,7 @@
 title: "Go 语言基础"
 date: 2023-05-10T16:45:58+08:00
 lastmod: 2023-05-10T16:45:58+08:00
-draft: false
+draft: true
 tags: ["Go"]
 categories: ["Programming"]
 ---
