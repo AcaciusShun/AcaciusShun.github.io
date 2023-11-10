@@ -71,7 +71,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "https://www.somincola.com/"          
+            --baseURL "https://www.xubailong.com/"          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
