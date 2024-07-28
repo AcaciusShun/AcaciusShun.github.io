@@ -1,7 +1,7 @@
 
 [submodule "themes/diary"]
 	path = themes/diary
-	url = https://github.com/bailongctui/hugo-theme-diary.git
+	url = https://github.com/AcaciusShun/hugo-theme-diary.git
 [submodule "themes/black-and-light"]
 	path = themes/black-and-light
-	url = https://github.com/bailongctui/hugo-black-and-light-theme.git
+	url = https://github.com/AcaciusShun/hugo-black-and-light-theme.git
